@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/validacion.css">
+  </head>
+  <body>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div class="well well-sm  ">
+                    <form action="login.html" name="formu" id="formu"onsubmit="return validarFormulario()" method="POST">
+                        <fieldset>
+                            <legend class="text-center header">Registrarse</legend>
+    
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <input id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" class="form-control"onblur="revisar(this); revisarNombre(this)"  onkeyup="revisar(this); revisarNombre(this)"  required>
+                                </div>
+                            </div>    
+                    
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-envelope bigicon"></i></i></span>
+                                <div class="col-md-8">
+                                    <input id="email" name="email" type="text" placeholder="Ingrese su email" class="form-control" onblur="revisar(this); revisarEmail(this)"  onkeyup="revisar(this); revisarEmail(this)"  required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-birthday-cake bigicon" ></i></i></span>
+                                <div class="col-md-8">
+                                    <input  type="date" name="dia"  id="fecha" placeholder="dia" class="form-control" onblur="revisar(this); revisarFecha(this)"  onkeyup="revisar(this); revisarFecha(this)"  required >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-lock bigicon"></i></i></span>
+                                <div class="col-md-8">
+                                    <input id="clave" name="clave" type="password" placeholder="Ingrese su contraseña" class="form-control" onblur="revisar(this); revisaClave(this)"  onkeyup="revisar(this); revisaClave(this)"  required>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-phone bigicon"></i></i></span>
+                                <div class="col-md-8">
+                                    <input id="telefono" name="telefono" type="text" placeholder="telefono" class="form-control" onblur="revisar(this); revisaNumero(this)" onkeyup="revisar(this); revisaNumero(this)" required>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fas fa-comment-dots bigicon"></i></i></span>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Ingrese el nombre de algunos animes que le llamaron la atencion" rows="7" onblur="revisar(this); revisaMensaje(this,15)" onkeyup="revisar(this); revisaMensaje(this,15)" required></textarea>
+                                </div>
+                            </div>
+                            
+                          <div class="form-group " >
+                                <h4>Seleccione el Interes de Preferencia:</h4>
+                                <form id="formposicionjugadores" action="/posicionjugadores.php" method="post">
+                                    .
+                                    <ul>
+                                        <li><input type="checkbox"  id="interes" name="interes"  value="Arte" /> Arte</li>
+                                        <li><input type="checkbox"  id="interes" name="interes"  value="Musica" /> Musica</li>
+                                        <li><input type="checkbox"  id="interes" name="interes"  value="Tecnologia" /> Tecnologia</li>
+                                        <li><input type="checkbox"  id="interes" name="interes"  value="Juegos" /> Juegos</li>
+                                    </ul>
+                                   
+                                    <div id="consolaerror" class="consola"></div>
+                                </form>
+                                      <h4>Desea la Suscripción al Boletín de novedades</h4>  
+                                <div class="checkbox-inline"> 
+                                     <p id="mensajee"></p>
+                                        <label >
+                                              <input type="radio" name="opciones" onclick="check(this.value)"  value="Si">Si
+                                              <input  type="radio" name="opciones" onclick="check(this.value)"  value="No">No
+                                          </label> 
+                                </div> 
+                          </div>
+                            <div class="checkbox">
+                                 <label>
+                                     <input type="checkbox"  id="opcion" name="opcion" value="Acepto" ><a class="terminos" href="https://www.securityartwork.es/2013/06/11/he-leido-y-acepto-los-terminos-y-condiciones-de-uso/">Acepto terminos y condiciones</a></a>
+                                </label>
+                             </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg"  name="registrar"  value="Enviar">Enviar</button>
+                                    <button type="submit" class="btn btn-dark btn-lg"><a href="login.html">Iniciar Sesion</a></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/validacion.js"></script>
+    <script src="JS/checbox.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+
+    html,body{
+		background-image: url("../img/anime2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	opacity: 0.82;
+	height: 100%;
+	}
+	
+	.container{
+	height: 100%;
+	align-content: center;
+	}
+	
+	.card{
+	height: 370px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 400px;
+	background-color: rgba(0,0,0,0.5) !important;
+	}
+	
+	.icon span{
+	font-size: 60px;
+	margin-left: 10px;
+	color: rgb(10, 230, 127);
+	}
+	
+	.icon span:hover{
+	color: rgb(66, 156, 192);
+	cursor: pointer;
+	}
+	
+	.card-header h3, .recordar{
+	color: white;
+	}
+	
+	.icon{
+	position: absolute;
+	right: 20px;
+	top: -45px;
+	}
+	
+	.input:focus{
+		background-color:#fff;
+		border: 3px solid rgb(10, 230, 127);
+		padding: 10px 10px 10px 47px;
+		
+	}
+
+	input.error, textarea.error{
+		 font-family:principal;
+		 font-size:20px;
+		 line-height:25px;
+		 background-color:rgb(236, 114, 114);
+		 padding: 10px 10px 10px 47px;
+		 margin-bottom:8px;
+		 width:100%;
+		 box-sizing:border-box;
+		 border:0px;
+	}
+	
+	input.error::-webkit-input-placeholder{
+		color:white;
+	}
+	
+	textarea.error::-webkit-input-placeholder{
+		color:white;
+		
+	}
+	
+	.Registrarse-btn{
+	color: black;
+	background-color:rgb(10, 230, 127);
+	width: 100px;
+	}
+	
+	.Registrarse-btn:hover{
+	color: black;
+	background-color: white;
+	}
+	
+	.links{
+	color: white;
+	}
+	
+	.links a{
+	margin-left: 4px;
+	color: white;
+	}
+
+

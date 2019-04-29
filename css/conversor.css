@@ -1,0 +1,40 @@
+    head , body{
+	background-image: url("../img/anime5.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	opacity: 0.82;
+	height: 100%;
+	}
+	.Actualizar {
+		outline: none;
+		background-color: #dfe;
+		border: 0;
+		-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+		padding: 0 4px 0 4px;
+		font-size: 28px;
+	  }
+	.container{
+	height: 100%;
+	align-content: center;
+	color: white;
+	}
+
+	.tamaño, .Tamaño{
+		font-size: 27px;
+	}
+	.Actualizar-btn{
+		color: white;
+		background-color:rgb(10, 230, 127);
+		width: 100px;
+		
+	}
+			
+	.Actualizar-btn:hover{
+		color: black;
+		background-color:#96FFFF
+	}
+	
