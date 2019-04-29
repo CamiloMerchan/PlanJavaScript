@@ -10,7 +10,7 @@ function validarFormulario(){
     exp1 = /^([a-z ñáéíóú]{2,60})$/;
     if(!exp1.test(document.getElementById("nombre").value)){
         datosCorrectos=false;
-        error="\n  El Nombre es incorrecto, verifique que no este ingresando numeros o caracteres ilegales";
+        error="\n  El Nombre es incorrecto, verifique que no este ingresando numeros o caracteres ilegaleso que no incluya Mayusculas";
     }
     
     if(document.getElementById("telefono").value==""){
